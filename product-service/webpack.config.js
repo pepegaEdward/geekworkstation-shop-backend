@@ -1,4 +1,7 @@
+const webpack = require('webpack')
+
 module.exports = {
     target: 'node',
-    mode: 'production'
+    mode: 'production',
+    plugins: [new webpack.IgnorePlugin({ resourceRegExp: /^pg-native$/ })],
 }
